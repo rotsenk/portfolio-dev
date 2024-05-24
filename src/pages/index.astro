@@ -1,10 +1,60 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Badge from "../components/Bagde.astro";
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import BehanceIcon from "../components/icons/Behance.astro";
+import EmailIcon from "../components/icons/Email.astro";
+import SocialPill from "../components/SocialPill.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
+<Layout title="nestor rivas portfolio - Web and Frontend Developer.">
+  <main>
+    <section class="w-full lg:w-[740px] mx-auto py-40">
+      <h1 class="text-5xl font-bold flex flex-row gap-x-4 pb-4">
+        Hey, I'm nestor
+        <div class="flex justify-center items-center">
+          <a 
+            href="https://www.linkedin.com/in/nestor-rivas-5a6163196/"
+            target="_blank"
+            rel="noopener"
+            class="flex justify-center item-center"
+          >
+            <Badge>Available for hire</Badge>
+          </a>
+        </div>
+      </h1>
+      <h2 class="text-2xl text-wrap">
+        <span>
+          Over 5 years of experience. 
+        </span>
+        Web and Frontend Developer,
+        <span class="text-sky-800 opacity-80">from San Miguel, El Salvador.</span>
+        <span class="text-sky-950 opacity-75">
+          I specialice in UI design, responsive web design and visual development.
+        </span>
+      </h2>
 
-	</main>
+      <nav class="flex gap-x-4 mt-8">
+        <SocialPill  href="https://www.linkedin.com/in/nestor-rivas-5a6163196/">
+          <LinkedInIcon class="w-6 h-6"/>
+            LinkedIn
+        </SocialPill>
+        <SocialPill href="https://github.com/rotsenk" >
+          <GitHubIcon class="w-6 h-6"/>
+            GitHub
+        </SocialPill>
+        <SocialPill href="https://www.behance.net/stanleyrivas" >
+          <BehanceIcon class="w-6 h-6"/>
+            Behance
+        </SocialPill>
+        <SocialPill>
+          <EmailIcon href="mailto:stanley.95@hotmail.com" class="w-6 h-6"/>
+            stanley.95@hotmail.com
+        </SocialPill>
+      </nav>
+
+    </section>
+  </main>
 </Layout>
