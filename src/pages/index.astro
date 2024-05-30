@@ -7,11 +7,14 @@ import GitHubIcon from "../components/icons/GitHub.astro";
 import BehanceIcon from "../components/icons/Behance.astro";
 import EmailIcon from "../components/icons/Email.astro";
 import SocialPill from "../components/SocialPill.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Briefcase from "../components/icons/Briefcase.astro";
 ---
 
 <Layout title="nestor rivas portfolio - Web and Frontend Developer.">
   <main>
-    <section class="w-full lg:w-[740px] mx-auto py-40">
+    <SectionContainer class="py-40 pb-20">
       <h1 class="text-5xl font-bold flex flex-row gap-x-4 pb-4">
         Hey, I'm nestor
         <div class="flex justify-center items-center">
@@ -54,7 +57,15 @@ import SocialPill from "../components/SocialPill.astro";
             stanley.95@hotmail.com
         </SocialPill>
       </nav>
+    </SectionContainer>
 
-    </section>
+    <!-- Experience -->
+    <SectionContainer>
+      <h2 class="text-2xl font-semibold mb-4 flex gap-x-2 items-center">
+        <Briefcase class="size-8" /> 
+        Work Experience
+      </h2>
+      <Experience />
+    </SectionContainer>
   </main>
 </Layout>
