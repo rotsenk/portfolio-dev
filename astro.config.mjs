@@ -9,5 +9,4 @@ export default defineConfig({
     // Desactiva la funcionalidad de Live Reload
     hmr: false,
   },
-  outDir: 'dist', 
 });
