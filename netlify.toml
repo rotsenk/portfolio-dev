@@ -1,0 +1,4 @@
+[[headers]]
+for = "*.webp"
+  [headers.values]
+  Content-Type = "image/webp"
