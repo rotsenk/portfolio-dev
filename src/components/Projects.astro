@@ -1,27 +1,202 @@
 ---
+import LinksPill from "../components/LinksPill.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import BrowserIcon from "../components/icons/Browser.astro";
+import Tailwind from "./icons/Tailwind.astro";
+import HTMLIcon from "./icons/HTMLIcon.astro";
+import CSSIcon from "./icons/CSS.astro";
+import ReactIcon from "./icons/React.astro";
+import ReduxIcon from "./icons/Redux.astro";
+import JSIcon from "./icons/JavaScript.astro";
+import BootstrapIcon from "./icons/Bootstrap.astro";
+import StyledComponentsIcon from "./icons/StyledComponents.astro";
+import PhpIcon from "./icons/PhpIcon.astro";
+import CSharpIcon from "./icons/CSharp.astro";
+import SqlIcon from "./icons/SqlIcon.astro";
+import FigmaIcon from "./icons/Figma.astro";
+import AdIlluIcon from "./icons/AdIllu.astro";
+import AdPhIcon from "./icons/AdPh.astro";
+
+const styles_class =
+  "bg-black/5 hover:scale-110 hover:bg-black/10 transition border border-black/10";
+
+const TAGS = {
+  TAILWIND: {
+    name: "Tailwind",
+    class: styles_class,
+    icon: Tailwind,
+  },
+  HTML: {
+    name: "HTML",
+    class: styles_class,
+    icon: HTMLIcon,
+  },
+  CSS: {
+    name: "CSS",
+    class: styles_class,
+    icon: CSSIcon,
+  },
+  REACT: {
+    name: "React",
+    class: styles_class,
+    icon: ReactIcon,
+  },
+  REDUX: {
+    name: "Redux",
+    class: styles_class,
+    icon: ReduxIcon,
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: styles_class,
+    icon: JSIcon,
+  },
+  BOOTSTRAP: {
+    name: "Bootstrap",
+    class: styles_class,
+    icon: BootstrapIcon,
+  },
+  STYLED_COMPONENTS: {
+    name: "styled-components",
+    class: styles_class,
+    icon: StyledComponentsIcon,
+  },
+  PHP: {
+    name: "Php",
+    class: styles_class,
+    icon: PhpIcon,
+  },
+  CSHARP: {
+    name: "C#",
+    class: styles_class,
+    icon: CSharpIcon,
+  },
+  SQLIcon: {
+    name: "SQL",
+    class: styles_class,
+    icon: SqlIcon,
+  },
+  FIGMA: {
+    name: "figma",
+    class: styles_class,
+    icon: FigmaIcon,
+  },
+  AdI: {
+    name: "Illustrator",
+    class: styles_class,
+    icon: AdIlluIcon,
+  },
+  AdPh: {
+    name: "Photoshop",
+    class: styles_class,
+    icon: AdPhIcon,
+  },
+};
+
 const PROJECTS = [
-    {
-        title: 'Agenda Electrónica',
-        description: 
-        'This project consists of the development of a Single Page Application (SPA) to manage a personal event agenda. Technologies such as Redux are used for state management. (The backend of this project is under construction)',
-        link: 'https://agenda-p-redux.netlify.app/',
-        github: 'https://github.com/rotsenk/Agenda-Redux/tree/main/agenda-redux',
-        image: './public/projects/agenda-redux.webp',
-        tags: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux']
-    }
-]
+  {
+    title: "Agenda Electrónica",
+    description:
+      "This project consists of the development of a Single Page Application (SPA) to manage a personal event agenda. Technologies such as Redux are used for state management. (The backend of this project is under construction)",
+    link: "https://agenda-p-redux.netlify.app/",
+    github: "https://github.com/rotsenk/Agenda-Redux/tree/main/agenda-redux",
+    image: "./public/projects/agenda-redux.webp",
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.REACT, TAGS.REDUX, TAGS.BOOTSTRAP],
+  },
+  {
+    title: "Shopping Cart",
+    description:
+      "This project consists of the development of a Single Page Application (SPA) of a Store and Shopping Cart with React + Global State with useContext + State Management with useReducer",
+    link: "https://shopping-cartspa.netlify.app/",
+    github:
+      "https://github.com/rotsenk/SPA-Carrito-Compra/tree/main/shopping-cart",
+    image: "./public/projects/shopping-cart.webp",
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.REACT, TAGS.BOOTSTRAP],
+  },
+  {
+    title: "UX/UI Design of eCommerce Platform.",
+    description:
+      "The eCommerce Platform UX/UI Design project was an academic initiative focused on optimizing the user experience for online shopping. Main functions included UX research, information architecture design, creation of visuals and wireframes, as well as the design of a graphic identity and a component library to ensure consistency in the user interface.",
+    link: "https://www.behance.net/gallery/182591245/UXUI-GuanaBox-WebSite-Prototype",
+    github:"#",
+    image: "./public/projects/guanabox-web.webp",
+    tags: [TAGS.FIGMA, TAGS.AdI, TAGS.AdPh],
+  },
+  {
+    title: "Facultad de Ingeniería y Arquitectura - Website",
+    description:
+      "This project consists of the development of a website for the School of Engineering and Architecture to show the academic processes, projects developed by each of the majors and procedures and procedures that UNIVO (Universidad de Oriente) students can carry out in their faculty. (I collaborated with the graphic line and web design of this)",
+    link: "https://fia.univo.edu.sv/index.html",
+    github: "#",
+    image: "./public/projects/fia-web.webp",
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT],
+  },
+  {
+    title: "MOEA UNIVO - Website",
+    description:
+      "This project consists of the development of a website for for the 36 OAS Model of Universities that was carried out at UNIVO. With the objective of centralizing information, facilitating international participation, reinforcing the institutional image. In addition, it allows real-time updates and serves as a post-event digital archive. (I collaborated with the graphic line and web design of this)",
+    link: "https://moea.univo.edu.sv/index.php",
+    github: "#",
+    image: "./public/projects/moea-univo-page.webp",
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.PHP],
+  },
+  {
+    title: "System Super Mark",
+    description:
+      "This project consists of developing a system for Super Mark that helps with local sales management, inventory management, wholesale sales, customers, and more. (*this is a private system so you do not have access without credentials.)",
+    link: "https://supermark.azurewebsites.net/Autenticacion/Login?ReturnUrl=%2F",
+    github: "#",
+    image: "./public/projects/super-mark.webp",
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.CSHARP, TAGS.SQLIcon],
+  },
+  {
+    title: "UniTech 2023 - Website",
+    description:
+      "This project consists of developing a website for an event called 'UniTech Week 2023', it was developed at the Universidad de Oriente UNIVO in the year 2023, this website contains information about this event that lasted a week in which students Every day they received workshops and presentations regarding emerging technologies.",
+    link: "https://unitech-univo-2023.netlify.app/",
+    github: "https://github.com/rotsenk/UniTech",
+    image: "./public/projects/unitech-week-univo.webp",
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.BOOTSTRAP],
+  },
+];
 ---
+
 {
-    PROJECTS.map(({ image, title, description, tags }) => (
-        <article>
-            <h3>{title}</h3>
-            <p>{description}</p>
-            <ul>
-                {tags.map(tag =>(
-                    <li>{tag}</li>
-                ))}
-            </ul>
-            <img src={image} alt={`Captura de pantalla del proyecto ${image}`}>
-        </article>
-    ))
+  PROJECTS.map(({ image, title, description, tags, link, github }) => (
+    <article>
+      <h3 class="text-2xl font-semibold text-sky-800 opacity-80 mb-2">
+        {title}
+      </h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <ul class="flex gap-x-2 flex-row pb-4">
+        {tags.map((tag) => (
+          <li>
+            <span
+              class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
+            >
+              <tag.icon class="size-4" />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <img
+        class="rounded shadow-2xl shadow-black/10 mb-4"
+        src={image}
+        alt={`Captura de pantalla del proyecto ${title}`}
+      />
+      <span class={`flex gap-x-2 rounded-full text-xs py-1 px-2 mb-6`}>
+        {github !== "#" && (
+          <LinksPill href={github}>
+            <GitHubIcon class="size-4" />
+            Go to GitHub
+          </LinksPill>
+        )}
+        <LinksPill href={link}>
+          <BrowserIcon class="size-4" />
+          Go to Link
+        </LinksPill>
+      </span>
+    </article>
+  ))
 }
