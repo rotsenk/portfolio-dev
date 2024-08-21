@@ -12,6 +12,7 @@ import SectionContainer from "../components/SectionContainer.astro";
 import Briefcase from "../components/icons/Briefcase.astro";
 import CodeIcon from "../components/icons/Code.astro";
 import Projects from "../components/Projects.astro";
+import TechStack from "../components/TechStack.astro";
 ---
 
 <Layout title="nestor rivas portfolio - Web and Frontend Developer.">
@@ -59,6 +60,14 @@ import Projects from "../components/Projects.astro";
             stanley.95@hotmail.com
         </SocialPill>
       </nav>
+    </SectionContainer>
+
+    <!-- Tech Stack -->
+    <SectionContainer id="techStack" >
+      <h2 class="text-3xl font-semibold mb-4 flex gap-x-2 items-center">
+        Tech Stack
+      </h2>
+      <TechStack/>
     </SectionContainer>
 
     <!-- Experience -->
