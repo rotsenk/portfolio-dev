@@ -2,6 +2,7 @@
 import LinksPill from "../components/LinksPill.astro";
 import GitHubIcon from "../components/icons/GitHub.astro";
 import BrowserIcon from "../components/icons/Browser.astro";
+
 import Tailwind from "./icons/Tailwind.astro";
 import HTMLIcon from "./icons/HTMLIcon.astro";
 import CSSIcon from "./icons/CSS.astro";
@@ -9,10 +10,6 @@ import ReactIcon from "./icons/React.astro";
 import ReduxIcon from "./icons/Redux.astro";
 import JSIcon from "./icons/JavaScript.astro";
 import BootstrapIcon from "./icons/Bootstrap.astro";
-import StyledComponentsIcon from "./icons/StyledComponents.astro";
-import PhpIcon from "./icons/PhpIcon.astro";
-import CSharpIcon from "./icons/CSharp.astro";
-import SqlIcon from "./icons/SqlIcon.astro";
 import FigmaIcon from "./icons/Figma.astro";
 import AdIlluIcon from "./icons/AdIllu.astro";
 import AdPhIcon from "./icons/AdPh.astro";
@@ -27,72 +24,62 @@ const TAGS = {
     class: styles_class,
     icon: TypeScript,
   },
+
   TAILWIND: {
-    name: "Tailwind",
+    name: "Tailwind CSS",
     class: styles_class,
     icon: Tailwind,
   },
+
   HTML: {
-    name: "HTML",
+    name: "HTML5",
     class: styles_class,
     icon: HTMLIcon,
   },
+
   CSS: {
-    name: "CSS",
+    name: "CSS3",
     class: styles_class,
     icon: CSSIcon,
   },
+
   REACT: {
     name: "React",
     class: styles_class,
     icon: ReactIcon,
   },
+
   REDUX: {
     name: "Redux",
     class: styles_class,
     icon: ReduxIcon,
   },
+
   JAVASCRIPT: {
     name: "JavaScript",
     class: styles_class,
     icon: JSIcon,
   },
+
   BOOTSTRAP: {
     name: "Bootstrap",
     class: styles_class,
     icon: BootstrapIcon,
   },
-  STYLED_COMPONENTS: {
-    name: "styled-components",
-    class: styles_class,
-    icon: StyledComponentsIcon,
-  },
-  PHP: {
-    name: "Php",
-    class: styles_class,
-    icon: PhpIcon,
-  },
-  CSHARP: {
-    name: "C#",
-    class: styles_class,
-    icon: CSharpIcon,
-  },
-  SQLIcon: {
-    name: "SQL",
-    class: styles_class,
-    icon: SqlIcon,
-  },
+
   FIGMA: {
-    name: "figma",
+    name: "Figma",
     class: styles_class,
     icon: FigmaIcon,
   },
-  AdI: {
+
+  ILLUSTRATOR: {
     name: "Illustrator",
     class: styles_class,
     icon: AdIlluIcon,
   },
-  AdPh: {
+
+  PHOTOSHOP: {
     name: "Photoshop",
     class: styles_class,
     icon: AdPhIcon,
@@ -102,163 +89,292 @@ const TAGS = {
 const PROJECTS = [
   {
     title: "TaenlyPods Landing Page",
+
     description:
-      "TaenlyPods is a premium landing page designed with psychology of color, clear visual hierarchy, and strategic CTAs. It features interactive benefits, credible testimonials, and a mobile-first experience optimized for usability and conversion. From pricing with psychological anchoring to consistent animations, every detail reinforces a coherent design system focused on business metrics.",
+      "A premium product landing page built with React, TypeScript, and Tailwind CSS. The project focuses on visual hierarchy, conversion-oriented design, responsive layouts, strategic calls to action, interactive sections, and subtle animations to create a polished user experience.",
+
     link: "https://taenlypods-landing.netlify.app/",
+
     github: "https://github.com/rotsenk/taenlypods-landing",
+
     image: "/images/staenlypods-landing.png",
+
     tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.TS],
   },
+
   {
     title: "Sales Dashboard App",
+
     description:
-      "I implemented a clear visual hierarchy with smooth transitions and micro‑interactions that reduce cognitive load. The design is mobile‑first, consistent in typography, colors, and reusable components, ensuring data accessibility and usability across devices. From intuitive affordances to error prevention with TypeScript, every detail reinforces a coherent system aimed at a premium user experience.",
+      "A responsive sales dashboard built with React, TypeScript, and Tailwind CSS to present business data through reusable interface components. The project emphasizes information hierarchy, responsive design, usability, micro-interactions, and maintainable frontend architecture.",
+
     link: "https://sales-dashboard-application.netlify.app/",
+
     github: "https://github.com/rotsenk/sales-dashboard-application",
+
     image: "/images/sales-dashboard.png",
+
     tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.TS],
   },
+
   {
     title: "Business Cards App",
+
     description:
-      "I designed a Digital Business Card Directory with a clear visual hierarchy and a semantic blue‑purple palette that guides user attention. Each card features purposeful micro‑interactions like 3D flip animations and progressive disclosure, while the responsive layout ensures usability across mobile and desktop with constant visual feedback. The result is a modern, intuitive, and functional interface that balances aesthetic appeal with practical usability for a premium experience.",
+      "A digital business card directory developed with React, TypeScript, and Tailwind CSS. The interface includes responsive layouts, reusable components, interactive 3D card effects, progressive disclosure, and visual feedback designed to provide a modern and intuitive experience across devices.",
+
     link: "https://business-cards-application.netlify.app/",
+
     github: "https://github.com/rotsenk/business-cards-application",
+
     image: "/images/business-cards-app.png",
+
     tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.TS],
   },
+
   {
-    title: "Mobile GenerousApp",
+    title: "GenerousApp — Mobile UX/UI",
+
     description:
-      "Designed a mobile app to facilitate donations to children's homes, focusing on transparency, ease of use, and personalization. Key features include donation usage reports, impact stories, and a rewards system for frequent donors.",
+      "A mobile application concept designed to facilitate donations to children's homes. The project focuses on transparency, personalization, and user engagement through donation reports, impact stories, and a rewards system for frequent donors. The interface was designed with UX principles and prototyped in Figma.",
+
     link: "https://www.figma.com/proto/LHS3khiEhP5zN2KbEJYEFM/generousApp?node-id=3-2&starting-point-node-id=3%3A2",
+
     github: "#",
+
     image: "/images/mobile-generousapp.png",
-    tags: [TAGS.FIGMA, TAGS.AdI, TAGS.AdPh],
+
+    tags: [TAGS.FIGMA, TAGS.ILLUSTRATOR, TAGS.PHOTOSHOP],
   },
+
   {
     title: "Agenda Electrónica",
+
     description:
-      "This project consists of the development of a Single Page Application (SPA) to manage a personal event agenda. Technologies such as Redux are used for state management. (The backend of this project is under construction)",
+      "A Single Page Application for managing personal events and appointments. The project explores React-based application architecture and Redux for centralized state management, with a responsive interface designed for an intuitive scheduling experience.",
+
     link: "https://agenda-p-redux.netlify.app/",
-    github: "https://github.com/rotsenk/Agenda-Redux/tree/main/agenda-redux",
+
+    github:
+      "https://github.com/rotsenk/Agenda-Redux/tree/main/agenda-redux",
+
     image: "/images/agenda-redux.webp",
-    tags: [TAGS.HTML, TAGS.CSS, TAGS.REACT, TAGS.REDUX, TAGS.BOOTSTRAP],
+
+    tags: [
+      TAGS.HTML,
+      TAGS.CSS,
+      TAGS.REACT,
+      TAGS.REDUX,
+      TAGS.BOOTSTRAP,
+    ],
   },
+
   {
     title: "Shopping Cart",
+
     description:
-      "This project consists of the development of a Single Page Application (SPA) of a Store and Shopping Cart with React + Global State with useContext + State Management with useReducer",
+      "A responsive e-commerce shopping cart application developed with React. The project demonstrates component-based architecture, global state management with Context API, and state updates with useReducer while maintaining a clean and responsive user interface.",
+
     link: "https://shopping-cartspa.netlify.app/",
+
     github:
       "https://github.com/rotsenk/SPA-Carrito-Compra/tree/main/shopping-cart",
+
     image: "/images/shopping-cart.webp",
-    tags: [TAGS.HTML, TAGS.CSS, TAGS.REACT, TAGS.BOOTSTRAP],
+
+    tags: [
+      TAGS.HTML,
+      TAGS.CSS,
+      TAGS.REACT,
+      TAGS.BOOTSTRAP,
+    ],
   },
+
   {
-    title: "Customizable Startup Landing Page",
+    title: "eCommerce Platform — UX/UI Design",
+
     description:
-      "A modern and professional template perfect for startups. Includes sections for services, testimonials, and pricing, with a fully customizable design to fit your brand. Optimized for user experience and conversion enhancement.",
-    link: "https://landing-page-startups.netlify.app/",
+      "An academic UX/UI design project focused on improving the online shopping experience. The project included UX research, information architecture, wireframes, visual design, graphic identity, and a reusable component library to maintain consistency across the interface.",
+
+    link:
+      "https://www.figma.com/proto/psIOE9sVKrXCxjUnfpHNtM/It's-Design!-Wireframes?embed_host=share&kind=proto&node-id=294-1318&starting-point-node-id=244%3A1038&t=MRLcynHk410H3FU4-1",
+
     github: "#",
-    image: "/images/LandingStartup.png",
-    tags: [TAGS.HTML, TAGS.CSS, TAGS.BOOTSTRAP, TAGS.JAVASCRIPT],
-  },
-  {
-    title: "UX/UI Design of eCommerce Platform.",
-    description:
-      "The eCommerce Platform UX/UI Design project was an academic initiative focused on optimizing the user experience for online shopping. Main functions included UX research, information architecture design, creation of visuals and wireframes, as well as the design of a graphic identity and a component library to ensure consistency in the user interface.",
-    link: "https://www.figma.com/proto/psIOE9sVKrXCxjUnfpHNtM/It's-Design!-Wireframes?embed_host=share&kind=proto&node-id=294-1318&starting-point-node-id=244%3A1038&t=MRLcynHk410H3FU4-1",
-    github: "#",
+
     image: "/images/guanabox-web.webp",
-    tags: [TAGS.FIGMA, TAGS.AdI, TAGS.AdPh],
+
+    tags: [
+      TAGS.FIGMA,
+      TAGS.ILLUSTRATOR,
+      TAGS.PHOTOSHOP,
+    ],
   },
+
   {
-    title: "Facultad de Ingeniería y Arquitectura - Website",
+    title: "Faculty of Engineering & Architecture — Website",
+
     description:
-      "This project consists of the development of a website for the School of Engineering and Architecture to show the academic processes, projects developed by each of the majors and procedures and procedures that UNIVO (Universidad de Oriente) students can carry out in their faculty. (I collaborated with the graphic line and web design of this)",
+      "A university website developed to present academic programs, student procedures, projects, and information related to the Faculty of Engineering and Architecture. I contributed to the visual design and frontend development using HTML, CSS, and JavaScript.",
+
     link: "https://fia.univo.edu.sv/index.html",
+
     github: "#",
+
     image: "/images/fia-web.webp",
-    tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT],
+
+    tags: [
+      TAGS.HTML,
+      TAGS.CSS,
+      TAGS.JAVASCRIPT,
+    ],
   },
-  // {
-  //   title: "System Super Mark",
-  //   description:
-  //     "This project consists of developing a system for Super Mark that helps with local sales management, inventory management, wholesale sales, customers, and more. (*this is a private system so you do not have access without credentials.)",
-  //   link: "https://supermark.azurewebsites.net/Autenticacion/Login?ReturnUrl=%2F",
-  //   github: "#",
-  //   image: "/images/super-mark.webp",
-  //   tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.CSHARP, TAGS.SQLIcon],
-  // },
+
   {
-    title: "UniTech 2023 - Website",
+    title: "UniTech 2023 — Event Website",
+
     description:
-      "This project consists of developing a website for an event called 'UniTech Week 2023', it was developed at the Universidad de Oriente UNIVO in the year 2023, this website contains information about this event that lasted a week in which students Every day they received workshops and presentations regarding emerging technologies.",
+      "A responsive event website created for UniTech Week 2023 at Universidad de Oriente. The website presented information about workshops, presentations, schedules, and emerging technology activities throughout the event.",
+
     link: "https://unitech-univo-2023.netlify.app/",
+
     github: "https://github.com/rotsenk/UniTech",
+
     image: "/images/unitech-week-univo.webp",
-    tags: [TAGS.HTML, TAGS.CSS, TAGS.BOOTSTRAP],
+
+    tags: [
+      TAGS.HTML,
+      TAGS.CSS,
+      TAGS.BOOTSTRAP,
+    ],
+  },
+
+  {
+    title: "Startup Landing Page",
+
+    description:
+      "A customizable landing page template designed for startups and small businesses. It includes sections for services, testimonials, pricing, and calls to action, with a responsive layout focused on usability and conversion.",
+
+    link: "https://landing-page-startups.netlify.app/",
+
+    github: "#",
+
+    image: "/images/LandingStartup.png",
+
+    tags: [
+      TAGS.HTML,
+      TAGS.CSS,
+      TAGS.BOOTSTRAP,
+      TAGS.JAVASCRIPT,
+    ],
   },
 ];
 ---
 
-{
-  PROJECTS.map(({ image, title, description, tags, link, github }) => (
-    <article class="group relative flex flex-col md:flex-row gap-6 mb-12 last:mb-0">
-      {/* Columna de imagen - 40% */}
-      <div class="md:w-2/5 flex-shrink-0">
-        <div class="relative overflow-hidden rounded-xl aspect-video md:aspect-square shadow-lg">
-          <img
-            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-            src={image}
-            alt={`Captura de pantalla del proyecto ${title}`}
-          />
-          <div class="absolute inset-0 bg-gradient-to-br from-sky-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-        </div>
-      </div>
+<section id="projects" class="scroll-mt-24">
+  <!-- Section heading -->
+  <div class="mb-12">
+    <span
+      class="text-sm font-semibold uppercase tracking-wider text-sky-600"
+    >
+      Portfolio
+    </span>
 
-      {/* Columna de contenido - 60% */}
-      <div class="md:w-3/5 flex flex-col justify-between">
-        <div>
-          <h3 class="text-2xl md:text-3xl font-bold text-sky-800 mb-3 group-hover:text-sky-600 transition-colors">
-            {title}
-          </h3>
-          
-          <p class="text-base md:text-lg text-gray-700 mb-4 leading-relaxed">
-            {description}
-          </p>
+    <p
+      class="mt-4 max-w-3xl text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400"
+    >
+      A selection of personal and academic projects exploring frontend
+      development, UI/UX design, state management, and modern web
+      technologies.
+    </p>
+  </div>
 
-          {/* Tags */}
-          <div class="flex flex-wrap gap-2 mb-6">
-            {tags.map((tag) => (
-              <span
-                class={`inline-flex items-center gap-1.5 rounded-full text-xs ${tag.class} py-1.5 px-3`}
-              >
-                <tag.icon class="size-3.5" />
-                {tag.name}
-              </span>
-            ))}
-          </div>
-        </div>
+  <!-- Projects -->
+  <div>
+    {
+      PROJECTS.map(
+        ({ image, title, description, tags, link, github }, index) => (
+          <article
+            class:list={[
+              "group relative flex flex-col md:flex-row gap-6 mb-12",
+              index === PROJECTS.length - 1 ? "last:mb-0" : "",
+            ]}
+          >
+            <!-- Project image -->
+            <div class="md:w-2/5 flex-shrink-0">
+              <div class="relative overflow-hidden rounded-xl aspect-video md:aspect-square shadow-lg bg-gray-100 dark:bg-gray-800">
+                <img
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  src={image}
+                  alt={`Screenshot of ${title}`}
+                  loading="lazy"
+                  decoding="async"
+                />
 
-        {/* Links al final */}
-        <div class="flex gap-3 mt-auto">
-          {github !== "#" && (
-            <LinksPill href={github}>
-              <GitHubIcon class="size-4" />
-              Code
-            </LinksPill>
-          )}
-          <LinksPill href={link}>
-            <BrowserIcon class="size-4" />
-            Live Demo
-          </LinksPill>
-        </div>
-      </div>
+                <div class="absolute inset-0 bg-gradient-to-br from-sky-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </div>
+            </div>
 
-      {/* Línea separadora sutil */}
-      <div class="absolute -bottom-6 left-0 right-0 h-px bg-gradient-to-r from-transparent via-sky-200 to-transparent" />
-    </article>
-  ))
-}
+            <!-- Project content -->
+            <div class="md:w-3/5 flex flex-col justify-between">
+              <div>
+                <h3
+                  class="text-2xl md:text-3xl font-bold text-sky-800 dark:text-sky-400 mb-3 group-hover:text-sky-600 dark:group-hover:text-sky-300 transition-colors"
+                >
+                  {title}
+                </h3>
+
+                <p
+                  class="text-base md:text-lg text-gray-700 dark:text-gray-300 mb-5 leading-relaxed"
+                >
+                  {description}
+                </p>
+
+                <!-- Technologies -->
+                <div class="flex flex-wrap gap-2 mb-6">
+                  {
+                    tags.map((tag) => (
+                      <span
+                        class:list={[
+                          "inline-flex items-center gap-1.5 rounded-full text-xs py-1.5 px-3",
+                          tag.class,
+                          "text-gray-700 dark:text-gray-300",
+                        ]}
+                      >
+                        <tag.icon class="size-3.5" />
+                        {tag.name}
+                      </span>
+                    ))
+                  }
+                </div>
+              </div>
+
+              <!-- Project links -->
+              <div class="flex flex-wrap gap-3 mt-auto">
+                {
+                  github !== "#" && (
+                    <LinksPill href={github}>
+                      <GitHubIcon class="size-4" />
+                      Code
+                    </LinksPill>
+                  )
+                }
+
+                <LinksPill href={link}>
+                  <BrowserIcon class="size-4" />
+                  Live Demo
+                </LinksPill>
+              </div>
+            </div>
+
+            <!-- Separator -->
+            {
+              index !== PROJECTS.length - 1 && (
+                <div class="absolute -bottom-6 left-0 right-0 h-px bg-gradient-to-r from-transparent via-sky-200 dark:via-sky-900 to-transparent" />
+              )
+            }
+          </article>
+        )
+      )
+    }
+  </div>
+</section>
